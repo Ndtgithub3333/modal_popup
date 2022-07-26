@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --pink_color: #e26e70;
+}
+
+body {
+    height: 100vh;
+    overflow: hidden; /* phan thua bi an*/
+    background: linear-gradient(to right,  rgb(65, 88, 208) 0%, rgb(200, 80, 192) 50%, rgb(255, 204, 112) 100% );
+    font-family: sans-serif;
+}
+
+.open_modal_btn {
+    padding: 20px 40px;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    position: relative; /* phai co position moi dung top dc */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+    transition: 0.4s;
+}
+
+.open_modal_btn:hover {
+    background-color: #ccc;
+
+}
+
+.modal {
+    background-color: rgba(0   , 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+
+
+}
+
+.modal .modal_inner {
+    animation: modalShow 0.2s linear;
+    width: 400px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 5px; 
+    overflow: hidden; /* bi header đè nên không tháy cong" */
+}
+
+.modal_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: var(--pink_color);
+    color: white;
+}
+
+.modal_header i:hover {
+    color: black;
+}
+.modal_header i {
+    transition: 0.5s;
+}
+
+.modal_body {
+    padding: 15px;
+
+}
+.modal_body h2{
+    color: var(--pink_color);
+    margin-bottom: 10px;
+
+}
+
+.modal_footer {
+    padding: 15px;
+    text-align: right;
+}
+.modal_footer button {
+    padding: 10px 20px;
+    color: white;
+    background-color: var(--pink_color);
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.5s;
+
+}
+
+.modal_footer button:hover {
+    background-color: #ccc;
+    color: black;
+}
+
+.hide {
+    display: none;
+}
+
+@keyframes modalShow {
+    from {
+        top: -200px;
+        opacity: 0;
+    }
+    to
+    {
+        top: 50%;
+
+        opacity: 1;
+    }
+    
+}
